@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Rock Paper Scissors Lizard Spock</string>
+    <string name="win">You Win!</string>
+    <string name="draw">Draw!</string>
+    <string name="lose">You Lose!</string>
+    <string name="total_wins">Wins: %1$d</string>
+    <string name="total_draws">Draws: %1$d</string>
+    <string name="total_lose">Lose: %1$d</string>
+    <string name="help_text">The rules are simple:
+         scissors cut paper, paper covers rock, rock crushes a lizard,
+         lizard poisons Spock, Spock breaks scissors, scissors decapitate lizard,
+         the lizard eats the paper, the paper substitutes the spock, the spock evaporates the rock,
+         and, as always, the rock breaks the scissors.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

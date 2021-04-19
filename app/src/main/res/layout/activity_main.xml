@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/spock_Btn"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_btns"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="getUserChoice"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lizard_Btn"
+        app:srcCompat="@drawable/ic_spock" />
+
+    <ImageButton
+        android:id="@+id/lizard_Btn"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_btns"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="getUserChoice"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/paper_Btn"
+        app:srcCompat="@drawable/ic_lizard" />
+
+    <ImageButton
+        android:id="@+id/rock_Btn"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_btns"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="getUserChoice"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_rock" />
+
+    <ImageButton
+        android:id="@+id/scissors_btn"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_btns"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="getUserChoice"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rock_Btn"
+        app:srcCompat="@drawable/ic_scissors" />
+
+    <ImageButton
+        android:id="@+id/paper_Btn"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_btns"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="getUserChoice"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scissors_btn"
+        app:srcCompat="@drawable/ic_paper" />
+
+    <Button
+        android:id="@+id/repeat_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btns"
+        android:onClick="unBlockUserChoice"
+        android:text="Repeat"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <ImageView
+        android:id="@+id/user_Choice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/round_btns"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/comp_Choice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_rock" />
+
+    <ImageView
+        android:id="@+id/comp_Choice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/round_btns"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/user_Choice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_rock" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/repeat_Btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_Choice" />
+
+    <ImageButton
+        android:id="@+id/help_Btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_help"
+        android:onClick="onHelpClicked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_help_24" />
+
+    <TextView
+        android:id="@+id/totalWins_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/totalDraw_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/totalDraw_tv" />
+
+    <TextView
+        android:id="@+id/totalDraw_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/totalLose_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totalWins_tv"
+        app:layout_constraintTop_toTopOf="@+id/totalLose_tv" />
+
+    <TextView
+        android:id="@+id/totalLose_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totalDraw_tv"
+        app:layout_constraintTop_toBottomOf="@+id/help_Btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
