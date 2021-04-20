@@ -1,14 +1,12 @@
 package ru.garindev.rockpaperscissorslizardspock
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import kotlin.random.Random
-import kotlin.random.nextUInt
 
 class MainActivity : AppCompatActivity() {
     lateinit var rockBtn: View
@@ -23,9 +21,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var textTotalWins: TextView
     lateinit var textTotalDraws: TextView
     lateinit var textTotalLose: TextView
+    lateinit var textCombo: TextView
     var totalWins = 0
     var totalDraws = 0
     var totalLose = 0
+    var combo = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         textTotalDraws = findViewById(R.id.totalDraw_tv)
         textTotalLose = findViewById(R.id.totalLose_tv)
         setTotals()
+        textCombo = findViewById(R.id.combo_tv)
     }
 
     fun getUserChoice(view: View){
@@ -114,10 +115,14 @@ class MainActivity : AppCompatActivity() {
         when(result){
             getString(R.string.win) -> {
                 totalWins++
+                combo++
+                showCombo(combo)
                 textTotalWins.text = getString(R.string.total_wins, totalWins)
             }
             getString(R.string.lose) -> {
                 totalLose++
+                combo = 0
+                unShowCombo()
                 textTotalLose.text = getString(R.string.total_lose, totalLose)
             }
             getString(R.string.draw) -> {
@@ -162,12 +167,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onHelpClicked(view: View){
-        
+        val intent = Intent(this, HelpActivity::class.java)
+        startActivity(intent)
     }
 
     fun setTotals(){
         textTotalWins.text = resources.getString(R.string.total_wins, totalWins)
         textTotalDraws.text = resources.getString(R.string.total_draws, totalDraws)
         textTotalLose.text = resources.getString(R.string.total_lose, totalLose)
+    }
+
+    fun showCombo(i: Int){
+        if (i > 1){
+            textCombo.text = getString(R.string.combo, i)
+            textCombo.visibility = View.VISIBLE
+        }
+    }
+
+    fun unShowCombo(){
+        textCombo.visibility = View.GONE
     }
 }

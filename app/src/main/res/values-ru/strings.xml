@@ -4,6 +4,7 @@
     <string name="total_wins">Победы: %1$d</string>
     <string name="total_draws">Ничьи: %1$d</string>
     <string name="total_lose">Проигрыши: %1$d</string>
+    <string name="combo">Комбо: %1$d</string>
     <string name="help_text">Правила простые:
         ножницы режут бумагу, бумага покрывает камень, камень давит ящерицу,
         ящерица отравляет спока,спок ломает ножницы, ножницы обезглавливают ящерицу,

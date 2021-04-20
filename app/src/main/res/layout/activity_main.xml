@@ -7,73 +7,89 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/spock_Btn"
-        android:layout_width="81dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="1dp"
+        android:id="@+id/paper_Btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
         android:background="@drawable/round_btns"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:onClick="getUserChoice"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lizard_Btn"
-        app:srcCompat="@drawable/ic_spock" />
-
-    <ImageButton
-        android:id="@+id/lizard_Btn"
-        android:layout_width="81dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/round_btns"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:onClick="getUserChoice"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/paper_Btn"
-        app:srcCompat="@drawable/ic_lizard" />
+        app:layout_constraintEnd_toStartOf="@+id/lizard_Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/scissors_btn"
+        app:srcCompat="@drawable/ic_paper" />
 
     <ImageButton
         android:id="@+id/rock_Btn"
-        android:layout_width="81dp"
-        android:layout_height="81dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
         android:background="@drawable/round_btns"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:onClick="getUserChoice"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scissors_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_rock" />
 
     <ImageButton
         android:id="@+id/scissors_btn"
-        android:layout_width="81dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
         android:background="@drawable/round_btns"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:onClick="getUserChoice"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/paper_Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/rock_Btn"
         app:srcCompat="@drawable/ic_scissors" />
 
     <ImageButton
-        android:id="@+id/paper_Btn"
-        android:layout_width="81dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="1dp"
+        android:id="@+id/spock_Btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
         android:background="@drawable/round_btns"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:onClick="getUserChoice"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scissors_btn"
-        app:srcCompat="@drawable/ic_paper" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/lizard_Btn"
+        app:srcCompat="@drawable/ic_spock" />
+
+    <ImageButton
+        android:id="@+id/lizard_Btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/round_btns"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="getUserChoice"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spock_Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/paper_Btn"
+        app:srcCompat="@drawable/ic_lizard" />
 
     <Button
         android:id="@+id/repeat_Btn"
@@ -129,6 +145,18 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_Choice" />
+
+    <TextView
+        android:id="@+id/combo_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/help_Btn"
